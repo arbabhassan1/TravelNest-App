@@ -1,0 +1,79 @@
+<% layout('/layouts/boilerplate') %>
+
+<div class="filters">
+  <div class="filter">
+    <i class="fa-solid fa-fire"></i>
+    Treanding
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-bed"></i>
+    Rooms
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-city"></i>
+    Iconic Cities
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-mountain-sun"></i>
+    Mountain
+  </div>
+  <div class="filter">
+    <i class="fa-brands fa-fort-awesome"></i>
+    Castle
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-person-swimming"></i>
+    Amazing Pools
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-sailboat"></i>
+    Boat
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-tractor"></i>
+
+    Farms
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-bowling-ball"></i>
+    Play
+  </div>
+  <div class="filter"><i class="fa-solid fa-water"></i> Lake</div>
+  <div class="filter">
+    <i class="fa-solid fa-ferry"></i>
+    Transportation
+  </div>
+</div>
+<hr />
+
+<div
+  class="row row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 row-cols-md-2 row-cols-sm-1 mt-4"
+>
+  <% for (const listing of allListings) {%>
+
+  <a href="/listings/<%= listing._id %>" class="listing-link">
+    <div class="card">
+      <img
+        src="<%= listing.image.url%>"
+        class="card-img-top photo"
+        alt=" <%= listing.title%>"
+        style="height: 20rem"
+      />
+      <div
+        class="card-img-overlay d-flex flex-column row-gap-3 justify-content-center align-items-center"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <b> <p class="listing-view-link">View Details</p></b>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          <b> <%= listing.title%></b>
+          <br />
+          &#8360; <%= listing.price.toLocaleString("en-PK") %> /Night
+        </p>
+      </div>
+    </div>
+  </a>
+  <% } %>
+</div>
