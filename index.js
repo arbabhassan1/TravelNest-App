@@ -4,7 +4,8 @@ const PORT_NO = 8484;
 
 // Home Route
 app.get("/", (req, res) => {
-  res.send("/listings");
+  ok = "Hello";
+  res.send("/listings" + ok);
 });
 
 app.listen(PORT_NO, () => {
