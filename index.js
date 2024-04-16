@@ -21,6 +21,7 @@ const LocalStrategy = require("passport-local");
 const app = express();
 const PORT_NO = 8484;
 // const MONGO_URL = "mongodb://127.0.0.1:27017/travelnest";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/travelnest";
 
 const dbURL = process.env.ATLAS_DB_URL;
 
