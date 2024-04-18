@@ -253,3 +253,9 @@ span {
 .logo a {
   font-weight: 700 !important;
 }
+
+/* SignUP & Login Button */
+
+.user-btn:hover {
+  transform: scale(1.09);
+}
