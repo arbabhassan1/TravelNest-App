@@ -259,3 +259,9 @@ span {
 .user-btn:hover {
   transform: scale(1.09);
 }
+
+@media screen and (max-width: 780px) {
+  .user-btn:hover {
+    transform: scale(1);
+  }
+}
