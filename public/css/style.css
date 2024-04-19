@@ -265,3 +265,10 @@ span {
     transform: scale(1);
   }
 }
+
+/* // Search PAGE */
+
+.s-title {
+  font-weight: 600;
+  color: var(--mainColor);
+}

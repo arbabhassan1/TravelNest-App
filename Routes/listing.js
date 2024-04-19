@@ -18,6 +18,10 @@ const {
 
 router.get("/", asyncWrap(listingController.index));
 
+// Search Route
+
+router.get("/search", asyncWrap(listingController.searchedListing));
+
 // New Route
 
 router.get("/new", isLoggedIn, listingController.renderNewForm);

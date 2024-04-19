@@ -19,10 +19,16 @@
       </div>
 
       <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
+        <form
+          class="d-flex"
+          role="search"
+          method="get"
+          action="/listings/search"
+        >
           <input
             class="form-control me-2 search-box"
             type="search"
+            name="q"
             placeholder="Search"
             aria-label="Search"
           />

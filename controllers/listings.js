@@ -77,3 +77,13 @@ module.exports.editExistingListing = async (req, res) => {
 
   res.redirect(`/listings/${id}`);
 };
+
+// Seareched Listings
+
+module.exports.searchedListing = async (req, res) => {
+  let { q } = req.query;
+  const regex = new RegExp(q, "i");
+  const searchedListings = await Listing.find({ title: regex });
+  console.log(searchedListings);
+  res.render("./listings/searched.ejs", { searchedListings, q });
+};
